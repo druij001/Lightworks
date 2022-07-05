@@ -10,13 +10,13 @@
         <script>
             function runData()
             {
-            console.log("ran");
             const scriptURL = 'https://script.google.com/macros/s/AKfycby_5Xh-_FrQIlxPBW9aGTInWg4UuoyA--W_5zCVRvYld8uP3xyU1ktZwAT-wDY3foF7TA/exec'
+           
             const form = document.forms['submit-to-google-sheet']
-
-                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
+               // fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                //.then(response => console.log('Success!', response))
+                //.catch(error => console.error('Error!', error.message))
+                console.log(new FormData(form));
             }   
           </script>
     </head>
