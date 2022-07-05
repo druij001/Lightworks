@@ -5,9 +5,25 @@
         <title>Video Information</title>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:ital,wght@0,200;0,600;1,100&display=swap" rel="stylesheet">
+    
+    
+        <script>
+            function runData()
+            {
+            console.log("ran");
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby_5Xh-_FrQIlxPBW9aGTInWg4UuoyA--W_5zCVRvYld8uP3xyU1ktZwAT-wDY3foF7TA/exec'
+            const form = document.forms['submit-to-google-sheet']
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            }   
+          </script>
     </head>
-    <body>
+
+    <body scroll="no" style="overflow: hidden">
         <section id="sec-1">
+            <form name="submit-to-google-sheet">
             <div class="container">
                 <h1>Welcome!</h1>
                 <p>Thanks for checking out lightworks! We'd love find out some more about you and your video!</p>
@@ -18,12 +34,15 @@
         </section>
         <section id="sec-2">
             <div class="container">
+                <a href="#sec-1">
+                    <div class="scroll-up"></div>
+                </a>
                 <h2>YOUR DETAILS</h2>
                 <p>So we can contact you!</p>
-                <input placeholder="First Name">   
-                <input placeholder="Last Name">
-                <input placeholder="Phone Number">
-                <input placeholder="Email">
+                <input placeholder="First Name" name="First">   
+                <input placeholder="Last Name" name="Last">
+                <input placeholder="Phone Number" name="Number">
+                <input placeholder="Email" name="Email">
                 <a href="#sec-3">
                     <div class="scroll-down"></div>
                 </a>
@@ -31,9 +50,12 @@
         </section>
         <section id="sec-3">
             <div class="container">
+                <a href="#sec-2">
+                    <div class="scroll-up"></div>
+                </a>
                 <h2>VIDEO DESCRIPTION</h2>
                 <p>What's happening in the video? Explain in as much detail as you can! Include the duration!</p>
-                <textarea class="large-input" placeholder="i.e. the video will feature 3 four wheel drives trecking around lots of different remote Australian places, which would be hard to get to with normal cars. There will be a dramatic voice over throughout, talking about adventure..."></textarea>
+                <textarea name="Description" class="large-input" placeholder="i.e. the video will feature 3 four wheel drives trecking around lots of different remote Australian places, which would be hard to get to with normal cars. There will be a dramatic voice over throughout, talking about adventure..."></textarea>
                 <a href="#sec-4">
                     <div class="scroll-down"></div>
                 </a> 
@@ -41,9 +63,12 @@
         </section>
         <section id="sec-4">
             <div class="container">
+                <a href="#sec-3">
+                    <div class="scroll-up"></div>
+                </a>
                  <h2>THE PURPOSE</h2>
                 <p>What made you decide to make this video?</p>
-                <textarea class="large-input" placeholder="i.e. We realised that people weren't aware of the freedom 4 wheel drives can give them!"></textarea>
+                <textarea name="Purpose" class="large-input" placeholder="i.e. We realised that people weren't aware of the freedom 4 wheel drives can give them!"></textarea>
                 <a href="#sec-5">
                     <div class="scroll-down"></div>
                 </a> 
@@ -51,9 +76,12 @@
         </section>
         <section id="sec-5">
             <div class="container">
+                <a href="#sec-4">
+                    <div class="scroll-up"></div>
+                </a>
                  <h2>THE AUDIENCE</h2>
                 <p>What age/type of people will be most interested in your video?</p>
-                <textarea class="large-input" placeholder="i.e. 30 - 45 year old men who drive 4 wheel drives..."></textarea>
+                <textarea name="Audience" class="large-input" placeholder="i.e. 30 - 45 year old men who drive 4 wheel drives..."></textarea>
                 <a href="#sec-6">
                     <div class="scroll-down"></div>
                 </a> 
@@ -61,9 +89,12 @@
         </section>
         <section id="sec-6">
             <div class="container">
+                <a href="#sec-5">
+                    <div class="scroll-up"></div>
+                </a>
                  <h2>THE PLATFORM</h2>
                 <p>Where will the video be played? Instagram? To a live audience? etc.</p>
-                <textarea class="large-input" placeholder="i.e. Instagram and at a conference with 300 people..."></textarea>
+                <textarea name="Platform" class="large-input" placeholder="i.e. Instagram and at a conference with 300 people..."></textarea>
                 <a href="#sec-7">
                     <div class="scroll-down"></div>
                 </a> 
@@ -71,11 +102,14 @@
         </section>
         <section id="sec-7">
             <div class="container">
+                <a href="#sec-6">
+                    <div class="scroll-up"></div>
+                </a>
                  <h2>EXAMPLES</h2>
                 <p>Have you found any similar videos that demonstrate what you want to do? Paste the links below!</p>
-                <input placeholder="www.Epic4WD.com/watch">   
-                <input placeholder="www.sandsurfing.com/watch">
-                <input placeholder="www.igotbogged.com/watch">
+                <input name="Example 1" placeholder="www.Epic4WD.com/watch">   
+                <input name="Example 2" placeholder="www.sandsurfing.com/watch">
+                <input name="Example 3" placeholder="www.igotbogged.com/watch">
                 <a href="#sec-8">
                     <div class="scroll-down"></div>
                 </a> 
@@ -83,9 +117,12 @@
         </section>
         <section id="sec-8">
             <div class="container">
+                <a href="#sec-7">
+                    <div class="scroll-up"></div>
+                </a>
                  <h2>THE DATE</h2>
                 <p>When does your video need to be finished?</p>
-                <input placeholder="June 30th, 2022">   
+                <input name="Date" placeholder="June 30th, 2022">   
                 <a href="#sec-9">
                     <div class="scroll-down"></div>
                 </a> 
@@ -93,10 +130,15 @@
         </section>
         <section id="sec-9">
             <div class="container">
+                <a href="#sec-8">
+                    <div class="scroll-up"></div>
+                </a>
+                <br><br><br><br>
                 <h1>Thankyou!</h1>
                 <p>Great! That's it. Hit the button below and we'll be in touch as soon as possible!</p>
-                <button>SUBMIT</button>
+                <button onclick="runData()">SUBMIT</button>
             </div>
         </section>
+    </form>
     </body>
 </html>

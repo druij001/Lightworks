@@ -205,7 +205,7 @@ textarea
     border: 2px solid var(--primary-color);
     margin: 10vh 0 0 0;
     position: relative;
-    left: 50%;
+    left: 52%;
     bottom: 10%;
     border-radius: 10px;
     cursor: pointer;
@@ -247,5 +247,58 @@ textarea
 100%{
     opacity: 0;
     top: 90%;
+}
+}
+
+
+.scroll-up
+{
+    height: 50px;
+    width: 30px;
+    border: 2px solid var(--primary-color);
+    margin: 10vh 0 0 0;
+    position: relative;
+    left: 50%;
+    top: 10%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.scroll-up::before,
+.scroll-up::after
+{
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    border: 2px solid var(--primary-color);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-bottom: transparent;
+    border-right: transparent;
+    animation: scroll-up 1s ease-in-out infinite;
+}
+
+.scroll-up::after
+{
+    bottom: -20%;
+    animation-delay: .2s;
+}
+
+@keyframes scroll-up 
+{
+0%{
+    opacity:0;
+}
+30%{
+    opacity: 1;
+}
+60%{
+    opacity: 1;
+}
+100%{
+    opacity: 0;
+    bottom: 60%;
 }
 }
