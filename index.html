@@ -13,9 +13,9 @@
             const scriptURL = 'https://script.google.com/macros/s/AKfycby_5Xh-_FrQIlxPBW9aGTInWg4UuoyA--W_5zCVRvYld8uP3xyU1ktZwAT-wDY3foF7TA/exec'
            
             const form = document.forms['submit-to-google-sheet']
-               // fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                //.then(response => console.log('Success!', response))
-                //.catch(error => console.error('Error!', error.message))
+               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
                 console.log(new FormData(form));
             }   
           </script>
@@ -136,7 +136,7 @@
                 <br><br><br><br>
                 <h1>Thankyou!</h1>
                 <p>Great! That's it. Hit the button below and we'll be in touch as soon as possible!</p>
-                <button type="button" onClick="runData()">SUBMIT</button>
+                <button onclick="runData()" type="button">SUBMIT</button>
             </div>
         </section>
     </form>
