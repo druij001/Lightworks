@@ -9,7 +9,6 @@
 
 html
 {
-    scroll-behavior: smooth;
 }
 
 p {
@@ -240,12 +239,19 @@ textarea
     border-top: transparent;
     border-left: transparent;
     animation: scroll-down 1s ease-in-out infinite;
+    transition: .3s;
 }
 
 .scroll-down::after
 {
     top: 0%;
     animation-delay: .2s;
+}
+
+.scroll-down:hover
+{
+    height: 55px;
+    width: 33px;
 }
 
 @keyframes scroll-down 
@@ -277,6 +283,13 @@ textarea
     top: 10%;
     border-radius: 10px;
     cursor: pointer;
+    transition: .3s;
+}
+
+.scroll-up:hover
+{
+    height: 55px;
+    width: 33px;
 }
 
 .scroll-up::before,
