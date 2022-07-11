@@ -60,6 +60,8 @@
                 e2.innerText = "Example 2: "+e2Col[0].value;
                 e3.innerText = "Example 3: "+e3Col[0].value;
                 dt.innerText = "Date: "+ dtCol[0].value;
+
+                window.location = window.location.href='#sec-9';
             }
           </script>
     </head>
@@ -67,14 +69,11 @@
     <body scroll="no" style="overflow: hidden">
         <section id="sec-1">
             <form name="submit-to-google-sheet">
-            <div class="container">
                 <h1>Welcome!</h1>
                 <p>Thanks for checking out lightworks! We'd love find out some more about you and your video!</p>
                 <button type="button" class="scroll-down" onclick="window.location.href='#sec-2';"></button>
-            </div>
         </section>
         <section id="sec-2">
-            <div class="container">
                 <h2>YOUR DETAILS</h2>
                 <p>So we can contact you!</p>
                 <input placeholder="First Name" name="First">   
@@ -82,97 +81,90 @@
                 <input type="tel" placeholder="Phone Number" name="Number">
                 <input type="email" placeholder="Email" name="Email">
                 <button type="button" class="scroll-down" onclick="window.location.href='#sec-3';"></button>
-            </div>
         </section>
         
         <section id="sec-3">
-            <div class="container">
                 <button type="button" class="scroll-up" onclick="window.location.href='#sec-2';"></button>
                 <h2>VIDEO DESCRIPTION</h2>
                 <p>What's happening in the video? Explain in as much detail as you can! Include the duration!</p>
                 <textarea name="Description" class="large-input" placeholder="i.e. the video will feature 3 four wheel drives trecking around lots of different remote Australian places, which would be hard to get to with normal cars. There will be a dramatic voice over throughout, talking about adventure..."></textarea>
-                <button class="scroll-down" onclick="window.location.href='#sec-4';"></button>
-            </div>
+                <button type="button" class="scroll-down" onclick="window.location.href='#sec-4';"></button>
         </section>
 
         <section id="sec-4">
-            <div class="container">
-                <button class="scroll-up" onclick="window.location.href='#sec-3';"></button>
+                <button type="button" class="scroll-up" onclick="window.location.href='#sec-3';"></button>
                 <h2>THE PURPOSE</h2>
                 <p>What made you decide to make this video?</p>
                 <textarea name="Purpose" class="large-input" placeholder="i.e. We realised that people weren't aware of the freedom 4 wheel drives can give them!"></textarea>
-                <button class="scroll-down" onclick="window.location.href='#sec-5';"></button> 
-            </div>
+                <button type="button" class="scroll-down" onclick="window.location.href='#sec-5';"></button> 
         </section>
 
         <section id="sec-5">
-            <div class="container">
-                <button class="scroll-up" onclick="window.location.href='#sec-4';"></button>
+                <button type="button" class="scroll-up" onclick="window.location.href='#sec-4';"></button>
                 <h2>THE AUDIENCE</h2>
                 <p>What age/type of people will be most interested in your video?</p>
                 <textarea name="Audience" class="large-input" placeholder="i.e. 30 - 45 year old men who drive 4 wheel drives..."></textarea>
-                <button class="scroll-down" onclick="window.location.href='#sec-6';"></button>
-            </div>
+                <button type="button" class="scroll-down" onclick="window.location.href='#sec-6';"></button>
         </section>
 
         <section id="sec-6">
-            <div class="container">
-                <button class="scroll-up" onclick="window.location.href='#sec-5';"></button>
+                <button type="button" class="scroll-up" onclick="window.location.href='#sec-5';"></button>
                 <h2>THE PLATFORM</h2>
                 <p>Where will the video be played? Instagram? To a live audience? etc.</p>
                 <textarea name="Platform" class="large-input" placeholder="i.e. Instagram and at a conference with 300 people..."></textarea>
-                <button class="scroll-down" onclick="window.location.href='#sec-7';"></button>
-            </div>
+                <button type="button" class="scroll-down" onclick="window.location.href='#sec-7';"></button>
         </section>
 
         <section id="sec-7">
-            <div class="container">
                 <button class="scroll-up" onclick="window.location.href='#sec-6';"></button>
                 <h2>EXAMPLES</h2>
                 <p>Have you found any similar videos that demonstrate what you want to do? Paste the links below!</p>
                 <input type="url" name="Example 1" placeholder="www.Epic4WD.com/watch">   
                 <input type="url" name="Example 2" placeholder="www.sandsurfing.com/watch">
                 <input type="url" name="Example 3" placeholder="www.igotbogged.com/watch">
-                <button class="scroll-down" onclick="window.location.href='#sec-8';"></button>
-            </div>
+                <button type="button" class="scroll-down" onclick="window.location.href='#sec-8';"></button>
         </section>
 
         <section id="sec-8">
-            <div class="container">
-                <button class="scroll-up" onclick="window.location.href='#sec-7';"></button>
+                <button type="button" class="scroll-up" onclick="window.location.href='#sec-7';"></button>
                 <h2>THE DATE</h2>
                 <p>When does your video need to be finished?</p>
                 <input name="Date" type="date" placeholder="June 30th, 2022">   
-                <button class="scroll-down" onclick="window.location.href='#sec-9';"></button>
-            </div>
+                <button type="button" class="scroll-down" onclick="displayData()"></button>
         </section>
 
         <section id="sec-9">
-            <div class="container">
-                <button class="scroll-up" onclick="window.location.href='#sec-8';"></button>
+                <button type="button" class="scroll-up" onclick="window.location.href='#sec-8';"></button>
                 <h2>That's It!</h2>
                 <p>Great! All done. Hit the button below to send us your video information!</p>
                 <br>
                 <div class="leftAlign">
                     <p1 Id="firstName">First Name:</p1>
+                    <br>
                     <p1 Id="lastName">Last Name: </p1>
+                    <br>
                     <p1 Id="number">Number: </p1>
+                    <br>
                     <p1 Id="email">Email: </p1>
                     <br>
+                    <br>
                     <p1 Id="description">Description: </p1>
+                    <br>
                     <p1 Id="purpose">Purpose: </p1>
+                    <br>
                     <p1 Id="audience">Audience: </p1>
+                    <br>
                     <p1 Id="platform">Platform: </p1>
                     <br>
+                    <br>
                     <p1 Id="ex1">Example 1: </p1>
-                    <p1 Id="ex2">Example 2: </p1>
-                    <p1 Id="ex3">Example 3: </p1>
+                    <br>
+                    <p1 Id="ex2">Example 2: </p1> <br>
+                    <p1 Id="ex3">Example 3: </p1> <br>
                     <br>
                     <p1 Id="date">Date: </p1>
                 </div>
-                <a href="#sec-10">
-                    <button onclick="runData()" type="button">SUBMIT</button>
-                </a>
+                    <button onclick="window.location.href='#sec-10'" type="button">SUBMIT</button>
             </div>
         </section>
         <section id="sec-10">
