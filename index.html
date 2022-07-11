@@ -17,21 +17,6 @@
                 .then(response => console.log('Success!', response))
                 .catch(error => console.error('Error!', error.message))
                 console.log(new FormData(form));
-
-                var fnCol = document.getElementsByName('First');
-                var lnCol = document.getElementsByName('Last');
-                var nCol = document.getElementsByName('Number');
-                var eCol = document.getElementsByName('Email');
-                var dCol = document.getElementsByName('Description');
-                var pCol = document.getElementsByName('Purpose');
-                var aCol = document.getElementsByName('Audience');
-                var plCol = document.getElementsByName('Platform');
-                var e1Col = document.getElementsByName('Example 1');
-                var e2Col = document.getElementsByName('Example 2');
-                var e3Col = document.getElementsByName('Example 3');
-                var dtCol = document.getElementsByName('Date');
-
-                dtCol[0].value = "";
             }
 
             function displayData()
@@ -114,9 +99,7 @@
                 <h2>VIDEO DESCRIPTION</h2>
                 <p>What's happening in the video? Explain in as much detail as you can! Include the duration!</p>
                 <textarea name="Description" class="large-input" placeholder="i.e. the video will feature 3 four wheel drives trecking around lots of different remote Australian places, which would be hard to get to with normal cars. There will be a dramatic voice over throughout, talking about adventure..."></textarea>
-                <a href="#sec-4">
-                    <div class="scroll-down"></div>
-                </a> 
+                <button class="scroll-down" onclick="window.location.href='#sec-4';"></button>
             </div>
         </section>
         <section id="sec-4">
